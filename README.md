@@ -67,6 +67,11 @@ Next, we will see how to setup an Angularjs boiler plate and we will build a cou
 On the final day, we will build an End to End Todo Application leveraging the M.E.A.N stack
 
 
-I will be updating this repo as the training goes on. Be sure to checkout the Workshop Home Page : 
+I will be updating this repo as the training goes on. Be sure to checkout the Workshop Home Page : http://mean-workshop.herokuapp.com
+
+### Run the Workshop locally
+
+* Download/clone this repo
+* Run `node index.js` and navigate to `http://localhost:3000`
 
 @arvindr21
