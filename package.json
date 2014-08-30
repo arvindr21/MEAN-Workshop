@@ -1,0 +1,17 @@
+{
+  "name": "MEAN-Workshop",
+  "version": "0.1.0",
+  "description": "App development with MEAN Stack Workshop [1st September 2014 - 5th September 2014]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arvind Ravulavaru",
+  "license": "MIT",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "forever": "^0.11.1"
+  }
+}
