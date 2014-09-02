@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Day 3 - MongoDB</title>
+
+  <meta name="description" content="Welcome to the M.E.A.N. Workshop">
+  <meta name="author" content="Arvind Ravulavaru">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+  if (window.location.search.match(/print-pdf/gi)) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'css/print/pdf.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }
+  </script>
+
+  <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+  <base target="_blank">
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section>
+        <h1>Day 3 MongoDB</h1>
+        <br/>
+        <br/>
+        <h3 style="width:100%;">hu"<b>mongo</b>"us</h3>
+        <br/>
+        <br/>
+        <h3>
+          <small><a href="http://mean-workshop.herokuapp.com/">Workshop Home Page</a>
+          </small>
+        </h3>
+      </section>
+
+      <section>
+        <h2>What is MongoDB?</h2>
+        <hr/>
+        <h3 style="line-height:72px;">MongoDB (from "humongous") is an open-source document database, and the leading NoSQL database. Written in C++</h3>
+      </section>
+
+      <section>
+        <h2>MongoDB?</h2>
+        <hr/>
+        <ul>
+          <li>Document-Oriented Storage</li>
+          <li>Rich, document-based queries</li>
+          <li>Full Index Support</li>
+          <li>Replication & High Availability</li>
+          <li>Auto-Sharding</li>
+          <li>Map/Reduce</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>NoSQL</h2>
+      </section>
+
+      <section>
+      <h2>JSON</h2><hr/>
+        <h2><code>{ Key:Value }</code></h2>
+      </section>
+
+      <section>
+        <h2>What is SQL?</h2>
+        <hr/>
+        <code>select * from employees where name = 'arvind'</code>
+        <br/>
+        <br/>
+        <code>insert into accounts values (salary, 10000)</code>
+        <br/>
+        <br/>
+        <code>update users set accno = 99399 where id = 9</code>
+        <br/>
+      </section>
+
+      <section>
+        <h2>What is NoSQL?</h2>
+        <hr/>
+        <code>db.employees.find({name : 'arvind'})</code>
+        <br/>
+        <br/>
+        <code>db.accounts.insert({salary : 10000})</code>
+        <br/>
+        <br/>
+        <code>db.users.update({id : 9},{accno : 93399})</code>
+        <br/>
+      </section>
+
+      <section>
+        <h2>SQL vs NoSQL</h2>
+        <hr/><br/>
+        	<h3>Database <code>===</code> Database</h3> <br/>
+        	<h4>Consists of multiple <code>collections</code></h4>
+        	<h4>Created on the fly</h4>
+      </section>
+
+      <section>
+        <h2>SQL vs NoSQL</h2>
+        <hr/><br/>
+        <h3>Table <code>===</code> Collection</h3> <br/>
+      	<h4><code>Schemaless</code> and holds documents</h4>
+      	<h4>Can be indexed with one or more keys</h4>
+      	<h4>Created on the fly</h4>
+      </section>
+
+       <section>
+        <h2>SQL vs NoSQL</h2>
+        <hr/><br/>
+        <h3>Document <code>===</code> Record</h3> <br/>
+        <h4>Stored as BSON (Binary JSON)</h4>
+        <h4>Primary key is <code>_id</code></h4>
+        </section>
+
+        <section>
+       	<h2>SQL  vs NoSQL</h2>
+        <hr/>
+        <table style="width:99%; margin:0 auto; display:block;" border="1">
+        
+        	<tbody>
+        		<tr>
+        		<td style="width:50%;">Database</td>
+        		<td> => </td>
+        		<td  style="width:50%;">Database</td>
+        		</tr>
+        		<tr>
+        		<td>Table/View</td>
+        		<td> => </td>
+        		<td>Collection</td>
+        		</tr>
+        		<tr>
+        		<td>Row/Record</td>
+        		<td> => </td>
+        		<td>JSON/BSON</td>
+        		</tr>
+        		<tr>
+        		<td>Column</td>
+        		<td> => </td>
+        		<td>Key</td>
+        		</tr>
+        		<tr>
+        		<td>Index</td>
+        		<td> => </td>
+        		<td>Index</td>
+        		</tr>
+        		<tr>
+        		<td>Join</td>
+        		<td> => </td>
+        		<td>Embedded Document</td>
+        		</tr>
+        		<tr>
+        		<td>Foreign Key</td>
+        		<td> => </td>
+        		<td>Reference</td>
+        		</tr>
+        		<tr>
+        		<td>Partition</td>
+        		<td> => </td>
+        		<td>Shard</td>
+        		</tr>
+        	</tbody>
+        </table>
+
+        </section>
+
+        <section>
+        <h2>BSON</h2>
+        <hr/>
+        MongoDB uses BSON as the data storage and network transfer format for "documents"
+        </section>
+
+        <section>
+        <h2>Why BSON?</h2>
+        <hr/>
+        <ul>
+        	<li>Fast scan-ability</li>
+        	<li>Easy manipulation</li>
+        	<li>Additional data types</li>	
+        </ul>
+        </section>
+
+         <section>
+        <h2>Sample BSON</h2>
+        <hr/>
+        <pre><code>x = {
+  "_id": ObjectId("4dcd3ebc9278000000005158"),
+  "d": ISODate("2011-05-13T14:22:46.777Z"),
+  "b": BinData(0, ""),
+  "c": "aa",
+  "n": 3,
+  "e": [],
+  "n2": NumberLong(33)
+}</code></pre>
+        </section>
+         <section>
+        <h2>BSON knows Datatypes</h2>
+        <hr/>
+        <pre><code>> x.d instanceof Date
+true
+
+> x.b instanceof BinData
+true
+
+> typeof x
+object
+
+> typeof x.b
+object
+
+> typeof x.n
+number
+
+> typeof x.c
+string</code></pre>
+        </section>
+         <section>
+        <h2>Hands On</h2>
+        </section>
+        <section>
+        <h2>Installation</h2> <hr/><br/>
+        <a href="http://www.mongodb.org/downloads">Download MongoDB</a>
+        </section>
+
+         <section>
+        <h2>Getting Started</h2><hr/>
+        <ul>
+        	<li>Open <code>command prompt/terminal</code></li>
+        	<li>Run <code>mongod</code></li>
+        	<li>Open another <code>command prompt/terminal</code></li>
+        	<li>Run <code>mongo</code> to open the mongo shell</li>
+        </ul>
+        </section>
+
+        <section>
+        <h2>Interacting with MonoDB</h2> <hr/>
+        Show all Databases <pre><code>show dbs</code></pre>
+        Use a Database <pre><code>use {database name}</code></pre>
+        Show a list of collections in the Database <pre><code>show collections </code></pre>
+        </section>
+
+        <section>
+        <h2>C.R.U.D.</h2>
+        </section>
+
+           <section>
+        <h2>Create</h2><hr/>
+        <code>db.collectionName.insert({key : value})</code> <br/><br/>
+        <h4>Example</h4><pre><code>db.users.insert({
+        name : 'arvind',
+        age : 'quite old'
+        })</code></pre>
+
+        <pre><code>db.users.find() // new record</code></pre>
+        </section>
+
+           <section>
+        <h2>Read</h2><hr/>
+        <code>db.collectionName.find()</code> <br/>
+        <code>db.collectionName.findOne()</code> <br/>
+        <code>db.collectionName.find().pretty()</code> <br/><br/>
+        <h4>Example</h4> <pre><code>db.users.find() // will list all users
+db.users.findOne() // will return the first document
+db.users.find({name : 'arvind'}) // will return multiple docs matching the query
+db.user.findOne({ name : 'arvind'}) // will return the first doc matching the query</code></pre>
+
+        </section>
+
+        <section>
+        <h2>Update</h2><hr/>
+        <pre><code>db.collectionName.update(
+        {condition : value}, 
+        {$set : {key:value}}, 
+        {upsert : true})</code></pre> <br/>
+        <h4>Example</h4><pre><code>db.users.update(
+        { name : 'arvind' }, 
+        $set : {age : 'you know'},
+        {upsert : true})</code></pre>
+
+        <pre><code>db.users.find() // updated record</code></pre>
+        </section>
+
+          <section>
+        <h2>Delete</h2><hr/>
+        <code>db.collectionName.remove({})</code> <br/>
+        <code>db.collectionName.remove({key : value})</code><br/><br/>
+        <h4>Example</h4><pre><code>db.users.remove({name : 'arvind'})</code></pre>
+       	<pre><code>db.users.find() // user collection is empty</code></pre>
+        </section>
+
+         <section>
+        <h2>Node.js + MongoDB</h2>
+        </section>
+
+         <section>
+        <h2>01.NodeNMongo</h2><hr/>
+        <pre><code>$ npm init</code></pre>
+        <code>package.json</code>
+        <pre><code>{
+  "name": "NodeNMongo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arvind Ravulavaru",
+  "license": "MIT"
+}</code></pre>
+        </section>
+         <section>
+        <h2>01.NodeNMongo <small>Cont..</small></h2><hr/>
+        Install <code>mongojs</code> to interact with MongoDB from Node.js
+        <pre><code>$ npm install mongojs --save</code></pre>
+        </section>
+
+ <section>
+        <h2>01.NodeNMongo <small>Cont..</small></h2><hr/>
+        <code>app.js</code> <br/>	
+        Refer <code>Mongojs</code>
+        <pre><code>var mongojs = require('mongojs');
+var db = mongojs('workshopdb', ['users']); // database and collection</code></pre>	
+
+        </section>
+         <section>
+        <h2>01.NodeNMongo <small>Cont..</small></h2><hr/>
+        <code>app.js</code> <br/>	
+        <pre><code>db.users.insert({
+  name: 'arvind',
+  age: 'quite old'
+}, function(err, data) {
+  console.log(err || data);
+});
+
+db.users.find({
+  name: 'arvind'
+}, function(err, data) {
+  console.log(err || data);
+});
+
+db.users.update({
+  name: 'arvind'
+}, {
+  age: 'You know!!'
+}, function(err, data) {
+  console.log(err || data);
+});
+
+db.users.remove(function(err, data) {
+  console.log(err || data);
+});</code></pre>
+
+</section>
+ <section>
+        <h2>01.NodeNMongo <small>Cont..</small></h2><hr/>
+        <code>console.log()</code> <br/>
+        Response will be <code>async</code>	
+<pre><code>{ updatedExisting: true, n: 1, connectionId: 39, err: null, ok: 1 }
+
+{ name: 'arvind',
+  age: 'quite old',
+  _id: 540343bf8ee06c2c083d4092 }
+
+{ n: 1 }
+
+[ { name: 'arvind',
+    age: 'quite old',
+    _id: 540343bf8ee06c2c083d4092 } ]</code></pre>
+    Nest DB queries to execute them <code>sync</code>
+        </section>
+
+
+        <section>
+        <h3>Node.js + Express.js + MongoDB</h3>
+        </section>
+
+        <section>
+        <h2>02.MongoExpressNode </h2><hr/>
+        <br/>
+        <ul>
+        <li> Scaffold an <code>express</code> app</li>
+        <li> Add <code>mongojs</code> dependency</li>
+        <li> Dispatch a <code>form</code> to the client</li>
+        <li> User fills the <code>form</code> and submits</li>
+        <li> We save that data to <code>mongodb</code></li>
+        <li> Display the data back to the <code>user</code></li>
+        </ul>
+
+        </section>
+
+        <section>
+        <h3>02.MongoExpressNode <small>Cont..</small></h3><hr/>
+        <h4>Scaffold an <code>express</code> app</h4>
+        <pre><code>$ express myApp -e</code></pre> 
+        <pre><code>create : myApp
+create : myApp/package.json
+create : myApp/app.js
+create : myApp/public
+create : myApp/public/javascripts
+create : myApp/public/images
+create : myApp/public/stylesheets
+create : myApp/public/stylesheets/style.css
+create : myApp/routes
+create : myApp/routes/index.js
+create : myApp/routes/users.js
+create : myApp/views
+create : myApp/views/index.ejs
+create : myApp/views/error.ejs
+create : myApp/bin
+create : myApp/bin/www
+
+   install dependencies:
+     $ cd myApp && npm install
+
+   run the app:
+     $ DEBUG=myApp ./bin/www</code></pre>
+     <pre><code>$ npm install</code></pre>
+        </section>
+
+         <section>
+        <h3>02.MongoExpressNode <small>Cont..</small></h3><hr/>
+        <h4>Add <code>mongojs</code> dependency</h4>
+        <pre><code>$ npm install --save mongojs</code></pre>
+        <pre><code>{
+  "name": "02.MongoExpressNode",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.6.6",
+    "cookie-parser": "~1.3.2",
+    "debug": "~1.0.4",
+    "ejs": "~0.8.5",
+    "express": "~4.8.6",
+    "mongojs": "^0.14.1",
+    "morgan": "~1.2.3",
+    "serve-favicon": "~2.0.1"
+  }
+}
+</code></pre>
+        </section>
+
+         <section>
+        <h3>02.MongoExpressNode <small>Cont..</small></h3><hr/>
+        <h4>Dispatch a <code>form</code> to the client</h4>
+        <code>views/index.ejs</code>
+        <pre><code>&lt;body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <h3> User Form </h3>
+    <form method="post" action="/data">
+      Name : <input type="text" name="name"><br/>
+      Gender : <select name="gender"> 
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select><br/>
+      <input type="submit" value="Save Data">
+    </form>
+ &lt;/body></code></pre>
+        </section>
+
+           <section>
+        <h3>02.MongoExpressNode <small>Cont..</small></h3><hr/>
+        <h4>We save that data to <code>mongodb</code></h4>
+        <code>routes/index.js</code>
+        <pre><code>var express = require('express');
+var router = express.Router();
+var mongojs = require('mongojs');
+var db = mongojs('workshopdb', ['users']);
+
+/* GET home page. */
+router.get('/', function(req, res) {
+  res.render('index', {
+    title: 'My App'
+  });
+});
+
+router.post('/data', function(req, res) {
+  var data = [];
+  db.users.insert(req.body, function(err, data) {
+    res.send('<h3>Saved data</h3> Name :' + data.name + '<br/> Gender : ' + data.gender);
+  });
+});
+
+module.exports = router;</code></pre>
+
+
+        </section>
+
+        <section>
+        <h3>02.MongoExpressNode <small>Cont..</small></h3><hr/>
+        <h4>Run <code>$ nodemon bin/www</code></h4>
+        <h4><code>http://localhost:3000</code></h4>
+        <h4>Fill the form and submit</h4>
+        <h4>Saved data will be shown in the next page</h4>
+        </section>
+
+         <section>
+        <h3>02.MongoExpressNode <small>Cont..</small></h3><hr/>
+        <h3>Verify the same in db</h3>
+        <pre><code>> use workshopdb</code></pre>
+        <pre><code>> db.users.find()</code></pre>
+
+        <pre><code>{
+  "name" : "Arvind",
+  "gender" : "male",
+  "_id" : ObjectId("54034ba503aa4ed60dbc8166")
+}</code></pre>
+       </section>
+
+      <section>
+        <h2>References</h2>
+        <hr/>
+        <ul> <li><a href="http://www.slideshare.net/raviteja2007/introduction-to-mongodb-12246792">Introduction to MongoDB</a></li><li><a href="https://dms.sztaki.hu/sites/dms.sztaki.hu/files/download/2012/csempesz-mongodb-2012-09-07.pdf">MongoDB in depth</a></li>
+       
+        </ul>
+      </section>
+
+
+
+      <section>
+        <h2>Thanks!
+        </h2>
+        <hr/>
+        <h3>Next up
+          <code>Angular.js</code>
+        </h3>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Parallax scrolling
+    // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+    // parallaxBackgroundSize: '2100px 900px',
+
+    // Optional libraries used to extend on reveal.js
+    dependencies: [{
+      src: 'lib/js/classList.js',
+      condition: function() {
+        return !document.body.classList;
+      }
+    }, {
+      src: 'plugin/markdown/marked.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: 'plugin/markdown/markdown.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: 'plugin/highlight/highlight.js',
+      async: true,
+      callback: function() {
+        hljs.initHighlightingOnLoad();
+      }
+    }, {
+      src: 'plugin/zoom-js/zoom.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }, {
+      src: 'plugin/notes/notes.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }]
+  });
+  </script>
+
+</body>
+
+</html>

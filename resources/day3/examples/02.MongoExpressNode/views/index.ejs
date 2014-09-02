@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <h3> User Form </h3>
+    <form method="post" action="/data">
+	    Name : <input type="text" name="name"><br/>
+	    Gender : <select name="gender"> 
+	    			<option value="male">Male</option>
+	    			<option value="female">Female</option>
+	    		</select><br/>
+	    <input type="submit" value="Save Data">
+    </form>
+  </body>
+</html>
