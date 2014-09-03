@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Day 4 - Angular.js</title>
+
+    <meta name="description" content="Welcome to the M.E.A.N. Workshop">
+    <meta name="author" content="Arvind Ravulavaru">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+    if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <base target="_blank">
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Day 4 Angular.js</h1>
+                <br/>
+                <br/>
+                <h4>Superheroic JavaScript MVW Framework</h4>
+                <br/>
+                <br/>
+                <h3>
+                    <small><a href="http://mean-workshop.herokuapp.com/">Workshop Home Page</a>
+                    </small>
+                </h3>
+            </section>
+
+            <section>
+                <h2>S.P.A</h2>
+                <hr>
+                <h5>Single Page Applications</h5>
+            </section>
+
+            <section>
+                <h2>Way way back then!</h2>
+                <hr>
+                <h5>
+                    <img src="imgs/1.png">
+                </h5>
+            </section>
+
+            <section>
+                <h2>Evolving</h2>
+                <hr>
+                <h5>
+                    <img src="imgs/2.png">
+                </h5>
+            </section>
+
+            <section>
+                <h2>Now</h2>
+                <hr>
+                <h5>
+                    <img src="imgs/3.png">
+                </h5>
+            </section>
+
+            <section>
+                <h2>Client side driven Apps</h2>
+                <hr/>
+                <h2>Scalability and Manageability</h2>
+            </section>
+
+            <section>
+                <h2>Separation of Concerns</h2>
+                <hr>
+                <h5>
+                    <img src="imgs/4.jpg">
+                </h5>
+            </section>
+
+            <section>
+                <h2>Enter <sup><code>ng</code></sup>
+                </h2>
+                <hr>
+                <h5>Angular.js</h5>
+            </section>
+
+            <section>
+                <h2>What Angular.js is NOT
+                </h2>
+            </section>
+
+            <section>
+                <h3>
+                    A Javascript library
+                </h3>
+            </section>
+
+            <section>
+                <img src="imgs/5.gif" width="600">
+            </section>
+
+            <section>
+                <h2>What Angular.js is NOT
+                </h2>
+            </section>
+
+            <section>
+                <h3>
+                    A Two-Way Data binding library
+                </h3>
+            </section>
+
+            <section>
+                <img src="imgs/6.gif" width="600">
+            </section>
+
+            <section>
+                <h4>
+                    And then people do this inside a controller
+                </h4>
+                <hr/>
+                <pre><code>
+        $('myelement').css({
+            position : absolute,
+            left : 100
+        });
+        </code></pre>
+            </section>
+
+            <section>
+                <img src="imgs/7.gif" width="600">
+            </section>
+
+            <section>
+                <h2>What is Angularjs?</h2>
+            </section>
+
+            <section>
+                <h2>ng</h2>
+                <hr>
+                <ul>
+                    <li>AngularJS — Superheroic JavaScript MVW Framework</li>
+                    <li>A complete client-side solution</li>
+                    <li>Angular is what HTML would have been had it been designed for application</li>
+                    <li>A presentation driven framework, if you may</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>ng Components</h2>
+                <hr>
+                <h5>
+                    <img src="imgs/12.png" width="700">
+                </h5>
+            </section>
+
+            <section background="#FFF">
+                <h2>M.V.C</h2>
+                <hr>
+                <h5>
+                    <img src="imgs/13.png" height="500">
+                </h5>
+            </section>
+
+            <section>
+                <h2>One-way Data binding</h2>
+                <hr>
+                <h5>
+                    <img src="imgs/14.png" height="500">
+                </h5>
+            </section>
+
+            <section>
+                <h2>Two-way Data binding</h2>
+                <hr>
+                <h5>
+                    <img src="imgs/15.png" height="500">
+                </h5>
+            </section>
+
+            <section>
+                <h3>Angular.js Programatic Structure</h3>
+            </section>
+
+            <section>
+                <img src="imgs/16.png" height="500" style="border:0px; box-shadow:none;">
+            </section>
+
+            <section>
+                <h3>Angular.js Application Flow</h3>
+            </section>
+
+
+            <section>
+                <img src="imgs/17.png" height="500" style="border:0px; box-shadow:none;">
+                <br/>
+                <a href="http://www.redant.com.au/assets/uploads/2012/12/angularjs-rails-asynchrous-diagram1.png">
+                    <small>source</small>
+                </a>
+            </section>
+
+
+            <section>
+                <h2>Hands On</h2>
+            </section>
+
+            <section>
+                <h2>Debugging</h2> <hr>
+                <h3><a href="https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en">AngularJS Batarang</a></h3>
+            </section>
+
+            <section>
+                <h2><a href="http://angularjs.org">angularjs.org</a>
+                </h2>
+            </section>
+
+            <section>
+                <h3>01.setupProject <code>a.k.a</code> Angular-i-fy</h3>
+                <hr/>
+                <ul>
+                  <li>Step 1 : Bower/Refer/Download Angular.js</li>
+                  <li>Step 2 : Add <code>ng-app</code></li>
+                  <li>Step 3 : Define <code>ng-app</code> in js</li>                  
+                </ul>
+                <br/><br/>
+                <h5>Angular.js app needs to be hosted (<code>localhost</code>)</h5>
+            </section>
+
+            <section>
+                <h3>01.setupProject <small>cont..</small></h3>
+                <hr/>
+                <h4>Dependency Management : <code>bower</code></h4>
+                <pre><code>$ [sudo] npm i -g bower</code></pre>
+                <pre><code>$ bower init</code></pre>
+                <code>bower.json</code>
+               <pre><code>{
+  "name": "01.setupProject",
+  "version": "0.1.0",
+  "homepage": "https://github.com/arvindr21/MEAN-Workshop",
+  "authors": [
+    "Arvind Ravulavaru"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ]
+}</pre></code>
+            </section>
+            <section>
+                <h3>01.setupProject <small>cont..</small></h3>
+                <hr/>
+                Add a <code>.bowerrc</code> file (bower config)[Optional]
+                <pre><code>{
+  directory: "libs"
+}
+</code></pre><pre><code>$ bower install angular --save</code></pre><h4>Project Structure</h4><pre><code>.
+|-- libs
+|   `-- angular
+|       `-- /// other files
+|       `-- angular.min.js
+|-- .bowerrc
+|-- bower.json</code></pre>
+            </section>
+
+           
+            <section>
+                <h3>01.setupProject <small>cont..</small></h3>
+                <hr/>
+                <h4>Bower reference - <code>index.html</code> [During Development]</h4>
+                <pre><code>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  <title>My App</title>
+  &lt;script type="text/javascript" src="libs/angular/angular.min.js">&lt;/script>
+&lt;/head>
+&lt;body>
+  <h1>My App</h1>
+&lt;/body>
+&lt;/html></code></pre>
+ 
+            </section>
+             <section>
+                <h3>01.setupProject <small>cont..</small></h3>
+                <hr/>
+                <h4>CDN Reference - <code>index.html</code> [In Production]</h4>
+                <pre><code>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  <title>My App</title>
+  &lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js">&lt;/script>
+&lt;/head>
+&lt;body>
+  <h1>My App</h1>
+&lt;/body>
+&lt;/html></code></pre>
+ 
+            </section>
+
+            <section>
+                <h3>01.setupProject <small>cont..</small></h3>
+                <hr/>
+                <h4>Add <code>angular</code> App</h4>
+                <pre><code>&lt;!DOCTYPE html>
+&lt;html ng-app="myApp">  // <-- ngApp
+&lt;head>
+  <title>My App</title>
+  &lt;script type="text/javascript" src="libs/angular/angular.min.js">&lt;/script>
+&lt;/head>
+&lt;body>
+  <h1>My App</h1>
+  &lt;script type="text/javascript">
+    var myApp = angular.module('myApp', []); // no dependency -> [] is mandatory!
+  &lt;/script>
+&lt;/body>
+&lt;/html></code></pre>
+            </section>
+
+            <section>
+                <h3>01.setupProject <small>cont..</small></h3>
+                <hr/>
+                <h4>Launch the App</h4>
+                <code>python Server</code> <br/>
+                <code>*AMP Server</code> <br/>
+                <code>Connect Server</code> <br/>
+            </section>
+
+             <section>
+                <h3>01.setupProject <small>cont..</small></h3>
+                <hr/>
+                <h4>Launch the App - <code>python</code></h4>
+                <code>Windows</code>
+                <pre><code>> python -m http.server</code></pre>
+
+                <code>*Nix</code>
+                <pre><code>$ python -m SimpleHTTPServer</code></pre>
+
+                <h5>Launch</h5>
+                <code>http://localhost:8000</code>
+            </section>
+
+            <section>
+                <h3>01.setupProject <small>cont..</small></h3>
+                <hr/>
+                <h4>Launch the App - <code>*AMP</code></h4>
+                <h5>Dump the code into the <code>*www*</code> folder</h5> <br/>
+                <h5>Launch</h5>
+                <code>http://localhost:port/foldername</code>
+            </section>
+
+            <section>
+                <h3>01.setupProject <small>cont..</small></h3>
+                <hr/>
+                <h4>Launch the App - <code>Connect</code></h4>
+                <ul>
+                    <li>Create a <code>package.json</code></li>
+                    <li>Install <code>gulp</code> globally
+                    </li>
+                </ul>
+                <pre><code>[sudo] npm i -g gulp</code></pre>
+                <ul>
+                    <li>
+                        Install gulp dependencies                        
+                    </li>
+                </ul>                
+                <pre><code>npm install gulp gulp-connect --save</code></pre>
+            </section>
+              <section>
+                <h3>01.setupProject <small>cont..</small></h3>
+                <hr/>
+                <h4>Launch the App - <code>Connect</code></h4>
+                <code>gulpfile.js</code>
+                <pre><code>var gulp = require('gulp'),
+  connect = require('gulp-connect');
+
+ var paths = {
+    app : './',
+    src : './*.html'
+ };
+
+gulp.task('connect', function() {
+  connect.server({
+    root: paths.app,
+    livereload: true
+  });
+});
+
+gulp.task('html', function() {
+  gulp.src(paths.src)
+    .pipe(connect.reload());
+});
+
+gulp.task('watch', function() {
+  gulp.watch([paths.src], ['html']);
+});
+
+gulp.task('default', ['connect', 'watch']);
+</code></pre>
+<code>http://localhost:8080</code>
+            </section>
+            
+            <section>
+                <h3>Code Cleanup</h3>
+                <hr/>
+                <p>Move scripts in <code>index.html</code> to <code>js/app.js</code></p>
+                <p>Refer <code>app.js</code> in <code>index.html</code></p>
+                <p>Add Bootstrap <code>bower install bootstrap --save</code></p>
+                <p>Refer Bootstrap CSS in <code>index.html</code></p>
+            </section>
+
+            <section>
+                <h2>Model Bindings</h2>                
+            </section>
+             <section>
+                <h3>02.modelBinding</h3>
+                <hr/>
+                <ul>
+                    <li>Angular uses HTML markups as templates</li>
+                    <li>Dynamic values are represented with <code>{{ variable }}</code></li>
+                    <li>Values inside <code>{{ variable }}</code> get resolved at runtime from <code>$scope</code></li>    
+                </ul>
+            </section>
+
+            <section>
+                <h3>02.modelBinding <small>cont..</small></h3>
+                <hr/>
+                <code>index.html</code>
+                <pre><code>
+<input ng-model="movieName" placeholder="Enter your favorite movie"  />  
+
+<h1 ng-show="movieName">My favorite movie is {{movieName}}!!</h1>
+
+</code></pre>
+<h5>Launch</h5>
+<pre><code>$ gulp</code></pre>
+            </section>
+
+            <section>
+                <h2>Controllers</h2>                
+            </section>
+
+            <section>
+                <h2>Controllers</h2> <hr/>
+                <code>In Angular, a Controller is a JavaScript constructor function that is used to augment the Angular Scope.</code>
+            </section>
+
+             <section>
+                <h2>Controllers</h2> <hr/>
+                <ul>
+                    <li>When a Controller is attached to the DOM via the <code>ng-controller</code> directive, Angular will instantiate a new Controller object, using the specified Controller's constructor function</li>
+                    <li>A new child scope will be available as an injectable parameter to the Controller's constructor function as <code>$scope</code>.</li>
+                </ul>
+            </section>
+
+             <section>
+                <h2>Use Controllers to</h2> <hr/>
+                <ul><li>Set up the initial state of the <code>$scope</code> object.</li>
+<li>Add behavior to the <code>$scope</code> object.</li></ul>
+             </section>
+
+               <section>
+                <h3>DO NOT Use Controllers to</h3> <hr/>
+                <ul>
+                <li>Manipulate DOM — Controllers should contain only business logic. <ul><li>Putting any presentation logic into Controllers significantly affects its testability</li>
+                <li>Angular has databinding for most cases and directives to encapsulate manual DOM manipulation.</li>
+                </ul> </li>
+                </ul>
+                </section>
+
+                <section>
+                <h3>DO NOT Use Controllers to</h3> <hr/>
+                <ul><li>Format input — Use angular form controls instead.</li>
+                <li>Filter output — Use angular filters instead.</li>
+                <li>Share code or state across controllers — Use angular services instead.</li>
+                <li>Manage the life-cycle of other components (for example, to create service instances).</li>
+                </ul>
+                </section>
+
+                <section>
+                <h2>Setup Scope</h2> <hr/>
+                <pre><code>var myApp = angular.module('myApp',[]);
+
+myApp.controller('GreetingController', ['$scope', function($scope) {
+  $scope.greeting = 'Hola!';
+}]);</code></pre>
+
+<pre><code><div ng-controller="GreetingController">
+  {{ greeting }}
+</div></code></pre>                
+            </section>
+            <section>
+                <h2>Directives</h2>                
+            </section>
+
+            <section>
+                <h2>Directives</h2> <hr/>
+                <code>At a high level, directives are markers on a DOM element (such as an attribute, element name, or CSS class) that tell AngularJS’s HTML compiler ($compile) to attach a specified behavior to that DOM element or even transform the DOM element and its children.</code>                
+            </section>
+
+            <section>
+                <h2>Directives</h2> <hr/>
+                <h5>Example :</h5>
+                <code>ng-app</code> <br/>
+                <code>ng-model</code>   <br/>  
+                <code>ng-controller</code> <br/>
+                <code>ng-repeat</code> <br/>
+                <code> ... </code>
+            </section>
+
+            <section>
+            <h2>Directives</h2> <hr/>
+                <h3><code>Add</code></h3>
+                <h5>Behavior</h5>
+                <h5>Data Binding scope</h5>
+                <h5>Replace or extend the HTML Element</h5>
+            </section>
+            <section>
+            <h2>Directives</h2> <hr/>
+                <h3>Execution Flow</h3>
+                <ul>
+                    <li>Detect the directive <code>ng-model</code></li>
+                    <li>Call the <code>$compile</code> method on the directive</li>
+                    <li>Bind directive with <code>$scope</code></li>
+                    <li>Render the generated <code>DOM</code></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>ng-repeat</h2>
+            </section>
+
+            <section>
+                <h2>ng-repeat</h2> <hr/>
+                <h4>Repeaters are “for loops”. We define a list in the Angular scope & then iterate the list using a <code>ng-repeat</code> directive & display the data.</h4>
+            </section>
+
+            <section>
+                <h2>ng-repeat</h2> <hr/>
+                <code>app.js</code>
+                <pre><code>myApp.controller("HomeCtrl", function($scope) {
+  $scope.movies = [{
+    "id": 0,
+    "name": "Iron Man",
+    "rating": 5,
+    "availability": 9,
+    "review": "Tony Stark is a billionaire industrialist and genius inventor who is kidnapped and forced to build a devastating weapon. Instead, using his intelligence and ingenuity, Tony builds a high-tech suit of armor and escapes captivity. When he uncovers a nefarious plot with global implications, he dons his powerful armor and vows to protect the world as Iron Man. (Paramount Pictures, Marvel Studios)",
+    "thumb": "http://upload.wikimedia.org/wikipedia/en/e/e0/Iron_Man_bleeding_edge.jpg"
+  }, {
+    "id": 1,
+    "name": "Jurassic Park",
+    "rating": 5,
+    "availability": 3,
+    "review": "Featuring incredible special effects and action - packed drama, Jurassic Park takes you to a remote island where an amazing theme park with living dinosaurs is about to turn deadly, as five people must battle to survive among the prehistoric predators.(Universal Pictures)",
+    "thumb": "http://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg"
+  }, {
+    "id": 2,
+    "name": "Transformers",
+    "rating": 5,
+    "availability": 5,
+    "review": "Transformers: Dark of the Moon features Sam Witwicky taking his first tenuous steps into adulthood while remaining a reluctant human ally of Optimus Prime. The film centers around the space race between the U.S.S.R. and the USA, suggesting there was a hidden Transformers role in it all that remains one of the planet's most dangerous secrets. The villain of the third film will be Shockwave. (DreamWorks Pictures)",
+    "thumb": "http://upload.wikimedia.org/wikipedia/en/6/66/Transformers07.jpg"
+  }];
+});</code></pre>
+
+            </section>
+             <section>
+                <h2>ng-repeat <small>cont..</small> </h2> <hr/>
+                <code>index.html.</code>
+                <pre><code>&lt;body class="container" ng-controller="HomeCtrl">
+  <h1>My App</h1> <hr/>
+  <h4>Movies</h4>
+  <ul>
+    <li ng-repeat="movie in movies">
+      {{movie.id}} - {{movie.name}} - {{movie.rating}}
+    </li>
+  </ul>
+&lt;/body></code></pre>Run
+<pre><code>$ gulp</code></pre><br/><code>http://localhost:8080</code>
+                </section>
+
+            <section>
+                <h2>Filters</h2>
+            </section>
+
+             <section>
+                <h2>Filters</h2> <hr/>
+                <h3>A filter formats the value of an expression for display to the user.</h3>
+            </section>
+
+             <section>
+                <h2>Simple Filter</h2> <hr/>
+                <h4>Print JSON</h4>
+                <h4>Prints <code>movies</code> from <code>app.js</code> present in <code>scope</code></h4>
+                <pre><code><h3>Print JSON</h3>
+&lt;pre>{{ movies | json }}&lt;/pre></code></pre>
+            </section>
+
+            <section>
+               <h2>Simple Filter</h2> <hr/>
+                <h4>Upper Case</h4>
+                <h4>Prints <code>movie names</code> as uppercase</h4>
+                <pre><code><ul>
+    <li ng-repeat="movie in movies">
+      {{movie.id}} - {{movie.name | uppercase}} - {{movie.rating}}
+    </li>
+  </ul></code></pre>
+            </section>
+
+            <section>
+               <h2>Orderby Filter</h2> <hr/>
+                <br/>
+                <pre><code><ul>
+    <li ng-repeat="movie in movies | orderBy:'name':true">
+      {{movie.id}} - {{movie.name | uppercase}} - {{movie.rating}}
+    </li>
+  </ul></code></pre>
+            </section>
+
+             <section>
+               <h2>Search Data</h2> <hr/>
+                <br/>
+                <pre><code><input ng-model="search.name"  type="text" placeholder="Search a movie"  class="form-control">
+   <br/>
+  <ul>
+    <li ng-repeat="movie in movies | orderBy:'name':true | filter:search">
+      {{movie.id}} - {{movie.name | uppercase}} - {{movie.rating}}
+    </li>
+  </ul></code></pre>
+            </section>
+
+            <section>
+                <h2>Scope Functions</h2>
+            </section>
+
+             <section>
+                <h2>Scope Functions</h2> <hr/>
+                <code>app.js</code>
+                <pre><code>var myApp = angular.module('myApp', []);
+
+myApp.controller("HomeCtrl", function($scope) {
+
+  $scope.currMovie = null;
+  $scope.getMovieById = function(id) {
+    var movies = $scope.movies;
+    for (var i = 0; i < movies.length; i++) {
+      var movie = $scope.movies[i];
+      if (movie.id == id) {
+        $scope.currMovie = movie;
+      }
+    }
+  };
+
+  $scope.movies = [{
+    "id": 0,
+    "name": "Iron Man",
+    "rating": 5,
+    "availability": 9,
+    "review": "Tony Stark is a billionaire industrialist and genius inventor who is kidnapped and forced to build a devastating weapon. Instead, using his intelligence and ingenuity, Tony builds a high-tech suit of armor and escapes captivity. When he uncovers a nefarious plot with global implications, he dons his powerful armor and vows to protect the world as Iron Man. (Paramount Pictures, Marvel Studios)",
+    "thumb": "http://upload.wikimedia.org/wikipedia/en/e/e0/Iron_Man_bleeding_edge.jpg"
+  }, {
+    "id": 1,
+    "name": "Jurassic Park",
+    "rating": 5,
+    "availability": 3,
+    "review": "Featuring incredible special effects and action - packed drama, Jurassic Park takes you to a remote island where an amazing theme park with living dinosaurs is about to turn deadly, as five people must battle to survive among the prehistoric predators.(Universal Pictures)",
+    "thumb": "http://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg"
+  }, {
+    "id": 2,
+    "name": "Transformers",
+    "rating": 5,
+    "availability": 5,
+    "review": "Transformers: Dark of the Moon features Sam Witwicky taking his first tenuous steps into adulthood while remaining a reluctant human ally of Optimus Prime. The film centers around the space race between the U.S.S.R. and the USA, suggesting there was a hidden Transformers role in it all that remains one of the planet's most dangerous secrets. The villain of the third film will be Shockwave. (DreamWorks Pictures)",
+    "thumb": "http://upload.wikimedia.org/wikipedia/en/6/66/Transformers07.jpg"
+  }];
+
+});</code></pre>
+            </section>
+
+             <section>
+                <h2>Scope Functions</h2> <hr/>
+                <code>index.html</code>
+                <pre><code> <ul>
+    <li ng-repeat="movie in movies | orderBy:'name':true | filter:search:strict">
+      {{movie.name | uppercase}}
+      <a href="javascript:" data-ng-click="getMovieById(movie.id)">Availability</a>
+    </li>
+  </ul>
+  <br/>
+  <label data-ng-show="currMovie">Availabilty for {{currMovie.name}} is {{currMovie.availability}}</label></code></pre>
+
+            </section>
+            <section>
+                <h2>ng-include</h2>
+            </section>
+
+             <section>
+                <h2>ng-include</h2> <hr/>
+                <ul>
+                <li>Create a folder named <code>partials</code></li>
+                <li>Create a new file named <code>header.html</code></li>
+                <li>Add reference to <code>header.html</code> inside <code>index.html</code></li>
+                </ul>
+                <pre><code><div ng-include="'partials/header.html'"></div></code></pre>
+            </section>
+
+            <section>
+                <h2>Routers</h2>
+            </section>
+
+            <section>
+                <h2>Routers</h2> <hr/>
+                <h3>Manages routes on your client side</h3>
+                <ul>
+                <li>Refer <code>angular-route.min.js</code> in <code>index.html</code>
+                <ul>
+                <li>Option 1 : Download from <a href="https://code.angularjs.org/1.2.23/">code.angularjs.org</a>
+                <li>Option 2 : Bower <code>bower i --save angular-route</code></li>
+                </ul>
+                </li>
+                </ul>
+            </section>
+
+             <section>
+                <h2>Routers</h2> <hr/>
+                Configure routes in <code>app.js</code>
+                <pre><code>var myApp = angular.module('myApp', ['ngRoute']);
+
+myApp.config(function($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'partials/home.html',
+      controller: 'HomeCtrl'
+    }).when('/movie/:id', {
+      templateUrl: 'partials/movie.html',
+      controller: 'movieDetailsController'
+    }).otherwise({
+      redirectTo: '/'
+    });
+});
+</code></pre>
+            </section>
+                <section>
+                <h2>Routers</h2> <hr/>
+                <code>controllers.js</code>
+                <pre><code>myApp.controller("HomeCtrl", function($rootScope, $scope) {
+
+  $rootScope.currMovie = null;
+  $rootScope.getMovieById = function(id) {
+    var movies = $scope.movies;
+    for (var i = 0; i < movies.length; i++) {
+      var movie = $scope.movies[i];
+      if (movie.id == id) {
+        $rootScope.currMovie = movie;
+      }
+    }
+  };
+
+  $scope.movies = [{
+    "id": 0,
+    "name": "Iron Man",
+    "rating": 5,
+    "availability": 9,
+    "review": "Tony Stark is a billionaire industrialist and genius inventor who is kidnapped and forced to build a devastating weapon. Instead, using his intelligence and ingenuity, Tony builds a high-tech suit of armor and escapes captivity. When he uncovers a nefarious plot with global implications, he dons his powerful armor and vows to protect the world as Iron Man. (Paramount Pictures, Marvel Studios)",
+    "thumb": "http://upload.wikimedia.org/wikipedia/en/e/e0/Iron_Man_bleeding_edge.jpg"
+  }, {
+    "id": 1,
+    "name": "Jurassic Park",
+    "rating": 5,
+    "availability": 3,
+    "review": "Featuring incredible special effects and action - packed drama, Jurassic Park takes you to a remote island where an amazing theme park with living dinosaurs is about to turn deadly, as five people must battle to survive among the prehistoric predators.(Universal Pictures)",
+    "thumb": "http://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg"
+  }, {
+    "id": 2,
+    "name": "Transformers",
+    "rating": 5,
+    "availability": 5,
+    "review": "Transformers: Dark of the Moon features Sam Witwicky taking his first tenuous steps into adulthood while remaining a reluctant human ally of Optimus Prime. The film centers around the space race between the U.S.S.R. and the USA, suggesting there was a hidden Transformers role in it all that remains one of the planet's most dangerous secrets. The villain of the third film will be Shockwave. (DreamWorks Pictures)",
+    "thumb": "http://upload.wikimedia.org/wikipedia/en/6/66/Transformers07.jpg"
+  }];
+
+});
+
+
+myApp.controller("movieDetailsController", function($scope, $routeParams) {
+  $scope.getMovieById($routeParams.id);
+});
+</code></pre>
+                </section><section>
+                <h2>Routers</h2> <hr/>
+                Updated <code>index.html</code>
+                <pre><code><!DOCTYPE html>
+&lt;html ng-app="myApp">
+
+&lt;head>
+  &lt;title>My App</title>
+
+  &lt;link rel="stylesheet" type="text/css" href="libs\bootstrap\dist\css\bootstrap.min.css">&lt;/link>
+
+  &lt;script type="text/javascript" src="libs/angular/angular.min.js">&lt;/script>
+  &lt;script type="text/javascript" src="libs/angular-route/angular-route.min.js">&lt;/script>
+
+  &lt;script type="text/javascript" src="js/app.js">&lt;/script>
+  &lt;script type="text/javascript" src="js/controllers.js">&lt;/script>
+&lt;/head>
+
+&lt;body class="container">
+  <div ng-include="'partials/header.html'"></div>
+  <hr/>
+  <div ng-view></div>
+&lt;/body>
+
+&lt;/html>
+&lt;/pre></code>
+
+                </section>
+                <section>
+                <h2>Routers</h2> <hr/>
+                Updated <code>home.html</code>
+                <pre><code><div ng-controller="HomeCtrl">
+  <input class="form-control" type="text" placeholder="Search a movie" ng-model="search.name">
+  <br/>
+  <ul>
+    <li ng-repeat="movie in movies | orderBy:'name':true | filter:search:strict">
+      {{movie.name | uppercase}}
+      <a href="javascript:" ng-click="getMovieById(movie.id)">Availability</a>
+      <a ng-href="#/movie/{{movie.id}}">Review</a>
+    </li>
+  </ul>
+  <br/> 
+  <label ng-show="currMovie">Availabilty for {{currMovie.name}} is {{currMovie.availability}}</label>
+</div>
+</code></pre>
+                </section>
+                 <section>
+                <h2>Routers</h2> <hr/>
+                Updated <code>movie.html</code>
+                <pre><code><div ng-controller="movieDetailsController">
+  <div ng-show="currMovie">
+    <h3>{{currMovie.name}}</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <img data-ng-src="{{currMovie.thumb}}">
+      </div>
+      <div class="col-md-6">
+        <h4>Review</h4>
+        <span data-ng-repeat="i in getCount(currMovie.rating) track by $index" class="glyphicon glyphicon-star"></span>
+        <label>{{currMovie.review}}</label>
+      </div>
+    </div>
+  </div>
+</div>
+</code></pre> Run <pre><code>$ gulp</code></pre> <code>http://localhost:8080</code>
+                </section>
+
+                <section>
+                    <h2>Services</h2><hr/>
+                    <h3>Express.js + Angular.js</h3>
+                </section>
+
+                <section>
+                    <h2>Services</h2> <hr/>
+                     <ul>
+                        <li>Step 1 : Scaffold an Express.js app and Install dependencies</li>
+                        <li>Step 2 : Code server side to dispatch data for a <code>get</code> endpoint</li>
+                        <li>Step 3 : Add bower support</li>
+                        <li>Step 4 : Download Angular.js and its dependencies via Bower</li>
+                        <li>Step 5 : Write Angular.js service to connect with server and render the data</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Services <small>cont..</small></h2> <hr/>
+                    <h3>Step 1 : Scaffold an Express.js app</h3>
+                    <pre><code>$ express myApp -e</code></pre>
+                    <pre><code>$ cd myApp && npm i </code></pre>
+                </section>
+
+                <section>
+                    <h2>Services <small>cont..</small></h2> <hr/>
+                    <h4>Step 2 : Code server side <code>get</code> endpoint</h4>
+                    <code>routes/index.js</code>
+                    <pre><code>var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res) {
+  res.render('index', { title: 'Express' });
+});
+
+router.get('/data', function(req, res) {
+  res.json(require('../data/movies'));
+});
+
+module.exports = router;
+</code></pre>
+                </section>
+                 <section>
+                    <h2>Services <small>cont..</small></h2> <hr/>
+                    <h4>Step 2 : Code server side <code>get</code> endpoint</h4>
+                    <code>data/movies.json</code>
+                    <pre><code>[{
+  "id": 0,
+  "name": "Iron Man",
+  "rating": 5,
+  "availability": 9,
+  "review": "Tony Stark is a billionaire industrialist and genius inventor who is kidnapped and forced to build a devastating weapon. Instead, using his intelligence and ingenuity, Tony builds a high-tech suit of armor and escapes captivity. When he uncovers a nefarious plot with global implications, he dons his powerful armor and vows to protect the world as Iron Man. (Paramount Pictures, Marvel Studios)",
+  "thumb": "http://upload.wikimedia.org/wikipedia/en/e/e0/Iron_Man_bleeding_edge.jpg"
+}, {
+  "id": 1,
+  "name": "Jurassic Park",
+  "rating": 5,
+  "availability": 3,
+  "review": "Featuring incredible special effects and action - packed drama, Jurassic Park takes you to a remote island where an amazing theme park with living dinosaurs is about to turn deadly, as five people must battle to survive among the prehistoric predators.(Universal Pictures)",
+  "thumb": "http://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg"
+}, {
+  "id": 2,
+  "name": "Transformers",
+  "rating": 5,
+  "availability": 5,
+  "review": "Transformers: Dark of the Moon features Sam Witwicky taking his first tenuous steps into adulthood while remaining a reluctant human ally of Optimus Prime. The film centers around the space race between the U.S.S.R. and the USA, suggesting there was a hidden Transformers role in it all that remains one of the planet's most dangerous secrets. The villain of the third film will be Shockwave. (DreamWorks Pictures)",
+  "thumb": "http://upload.wikimedia.org/wikipedia/en/6/66/Transformers07.jpg"
+}, {
+  "id": 3,
+  "name": "Avatar",
+  "rating": 4,
+  "availability": 3,
+  "review": "Jake Sully is a former Marine confined to a wheelchair. But despite his broken body, Jake is still a warrior at heart. He is recruited to travel light years to the human outpost on Pandora, where a corporate consortium is mining a rare mineral that is the key to solving Earth's energy crisis. Because Pandora's atmosphere is toxic, they have created the Avatar Program, in which human drivers  have their consciousness linked to an avatar, a remotely-controlled biological body that can survive in the lethal air. These avatars are genetically engineered hybrids of human DNA mixed with DNA from the natives of Pandora... the Na'vi. Reborn in his avatar form, Jake can walk again. He is given a mission to infiltrate the Na'vi, who have become a major obstacle to mining the precious ore. But a beautiful Na'vi female, Neytiri, saves Jake's life, and this changes everything. Jake is taken in by her clan, and learns to become one of them, which involves many tests and adventures. As Jake's relationship with his reluctant teacher Neytiri deepens, he learns to respect the Na'vi way and finally takes his place among them. Soon he will face the ultimate test as he leads them in an epic battle that will decide the fate of an entire world. (20th Century Fox)",
+  "thumb": "http://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg"
+}, {
+  "id": 4,
+  "name": "The Incredible Hulk",
+  "rating": 5,
+  "availability": 18,
+  "review": " The Incredible Hulk kicks off an all-new, explosive and action-packed epic of one of the most popular Super Heroes of all time. In the film, scientist Bruce Banner desperately hunts for a cure to the gamma radiation that poisoned his cells and unleashes the unbridled force of rage within him: The Hulk. Living in the shadows—cut off form a life he knew and the woman he loves, Betty Ross—Banner struggles to avoid the obsessive pursuit of his nemesis, General Thunderbolt Ross and the military machinery that seeks to capture him and brutally exploit his power. As all three grapple with the secrets that led to The Hulk’s creation, they are confronted with a monstrous new adversary known as the Abomination, whose destructive strength exceeds even The Hulk’s own. (Universal Studios)",
+  "thumb": "http://upload.wikimedia.org/wikipedia/en/8/88/The_Incredible_Hulk_poster.jpg"
+}, {
+  "id": 5,
+  "name": "X-Men",
+  "rating": 4,
+  "availability": 0,
+  "review": " Dr. Charles Xavier gathers children from all over the planet who were born with an added twist to their genetic code. Known as the X - factor  these children can perform extraordinary feats. Dr. Xavier calls them his X-Men.",
+  "thumb": "http://upload.wikimedia.org/wikipedia/en/8/8c/XMen1poster.jpg"
+}, {
+  "id": 6,
+  "name": "RoboCop",
+  "rating": 3,
+  "availability": 6,
+  "review": " The year is 2028 and multinational conglomerate OmniCorp is at the center of robot technology. Overseas, their drones have been used by the military for years, but have been forbidden for law enforcement in America. Now OmniCorp wants to bring their controversial technology to the home front, and they see a golden opportunity to do it. When Alex Murphy (Joel Kinnaman) – a loving husband, father and good cop doing his best to stem the tide of crime and corruption in Detroit – is critically injured, OmniCorp sees their chance to build a part-man, part-robot police officer. OmniCorp envisions a RoboCop in every city and even more billions for their shareholders, but they never counted on one thing: there is still a man inside the machine.",
+  "thumb": "http://upload.wikimedia.org/wikipedia/en/b/b1/Robocop_poster.jpg"
+}, {
+  "id": 7,
+  "name": "Godzilla (I)",
+  "rating": 3,
+  "availability": 2,
+  "review": " Godzilla does Manhattan in this variation on the Japanese A-bomb monster movie classic.",
+  "thumb": "http://upload.wikimedia.org/wikipedia/en/2/2e/Godzilla_%281998_Movie_Poster%29.jpg"
+}, {
+  "id": 8,
+  "name": "Hollow Man",
+  "rating": 3,
+  "availability": 6,
+  "review": " A government scientist (Bacon) discovers how to make people invisible. After a freak accident that makes him slowly disappear, he begins to go insane and seeks revenge on the other scientists on the project.",
+  "thumb": "http://upload.wikimedia.org/wikipedia/en/e/e1/Poster_Hollow_Man.jpg"
+}]
+</code></pre>
+                    </section>
+
+                     <section>
+                    <h2>Services <small>cont..</small></h2> <hr/>
+                    <h4>Step 3 : Add <code>bower</code> and configure <code>.bowerrc</code></h4>
+                    <pre><code>$ npm i bower --save</code></pre>
+                    <code>.bowerrc</code><pre><code>{
+    "directory" : "public/libs"
+}</code></pre>
+                    </section>
+                    <section>
+                    <h2>Services <small>cont..</small></h2> <hr/>
+                    <h4>Step 4 : Add client side dependencies</h4>
+                    <pre><code>$ bower i --save angular angular-route bootstrap
+</code></pre>
+                    </section>
+
+                     <section>
+                    <h2>Services <small>cont..</small></h2> <hr/>
+                    <h4>Step 5 : Build the Angular App</h4>
+                    <code>/views/index.ejs</code>
+                    <pre><code>&lt;!DOCTYPE html>
+&lt;html ng-app="myApp">
+
+&lt;head>
+  &lt;title>My App</title>
+
+  &lt;link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+
+  &lt;script type="text/javascript" src="/libs/angular/angular.min.js">&lt;/script>
+  &lt;script type="text/javascript" src="/libs/angular-route/angular-route.min.js">&lt;/script>
+
+  &lt;script type="text/javascript" src="js/app.js">&lt;/script>
+  &lt;script type="text/javascript" src="js/factory.js">&lt;/script>
+  &lt;script type="text/javascript" src="js/controllers.js">&lt;/script>
+&lt;/head>
+
+&lt;body class="container">
+  <div ng-include="'partials/header.html'"></div>
+  <hr/>
+  <div ng-view></div>
+&lt;/body>
+
+&lt;/html>
+</code></pre>
+                    </section>
+
+
+                     <section>
+                    <h2>Services <small>cont..</small></h2> <hr/>
+                    <h4>Step 5 : Build the Angular App</h4>
+                    <code>/public/js/factory.js</code>
+                    <pre><code>myApp.factory('moviesFactory', function($http) {
+  return {
+    getData: function() {
+      return $http.get('/data');
+    }
+  }
+});
+</code></pre>
+                    </section>
+
+
+                     <section>
+                    <h2>Services <small>cont..</small></h2> <hr/>
+                    <h4>Step 5 : Build the Angular App</h4>
+                    <code>/public/js/controllers.js</code>
+                    <pre><code>myApp.controller("HomeCtrl", function($rootScope, $scope, moviesFactory) {
+
+  $rootScope.currMovie = null;
+  $rootScope.getMovieById = function(id) {
+    var movies = $scope.movies;
+    for (var i = 0; i < movies.length; i++) {
+      var movie = $scope.movies[i];
+      if (movie.id == id) {
+        $rootScope.currMovie = movie;
+      }
+    }
+  };
+
+  moviesFactory.getData().then(function(data) {
+    $scope.movies = data.data;
+  })
+
+});
+
+
+myApp.controller("movieDetailsController", function($scope, $routeParams) {
+  $scope.getMovieById($routeParams.id);
+});
+</code></pre>
+                    </section>
+
+
+                     <section>
+                    <h2>Services <small>cont..</small></h2> <hr/>
+                   <h4>Run the App</h4>
+                   <pre><code>$ nodemon bin/www</code></pre>
+                   <code>http://localhost:3000</code>
+                    </section>
+
+
+            <section>
+                <h2>Thanks!
+                </h2>
+                <hr/>
+                <h4>Next up
+                    <code>Building a M.E.A.N Stack App</code>
+                </h4>
+            </section>
+
+        </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }]
+    });
+    </script>
+
+</body>
+
+</html>

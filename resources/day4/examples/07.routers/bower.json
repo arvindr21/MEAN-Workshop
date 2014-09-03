@@ -1,0 +1,21 @@
+{
+  "name": "01.setupProject",
+  "version": "0.1.0",
+  "homepage": "https://github.com/arvindr21/MEAN-Workshop",
+  "authors": [
+    "Arvind Ravulavaru <arvind.ravulavaru@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular-route": "~1.2.23"
+  }
+}

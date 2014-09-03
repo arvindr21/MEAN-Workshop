@@ -1,0 +1,13 @@
+<div ng-controller="HomeCtrl">
+  <input class="form-control" type="text" placeholder="Search a movie" ng-model="search.name">
+  <br/>
+  <ul>
+    <li ng-repeat="movie in movies | orderBy:'name':true | filter:search:strict">
+      {{movie.name | uppercase}}
+      <a href="javascript:" ng-click="getMovieById(movie.id)">Availability</a>
+      <a ng-href="#/movie/{{movie.id}}">Review</a>
+    </li>
+  </ul>
+  <br/> 
+  <label ng-show="currMovie">Availabilty for {{currMovie.name}} is {{currMovie.availability}}</label>
+</div>
