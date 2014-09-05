@@ -65,10 +65,10 @@ We will go through the basics of Angularjs
 ## Day 5
 ### M.E.A.N. Stack App 
 
-On the final day, we will build an End to End Todo Application leveraging the M.E.A.N stack with user authentication.
+On the final day, we will build an End to End Todo Application leveraging the M.E.A.N stack.
 
 
-I will be updating this repo as the training goes on. Be sure to checkout the Workshop Home Page : http://mean-workshop.herokuapp.com
+Workshop Home Page : http://mean-workshop.herokuapp.com
 
 ### Run the Workshop locally
 
