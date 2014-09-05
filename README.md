@@ -12,7 +12,7 @@ A repo for the 5 Day "App development with MEAN Stack" Workshop _[1st September 
 **N** - Nodejs
 
 ## Day 1 
-### Node js _[2 hours]_
+### Node js 
 
 We will be going through the basics of Node.js
 
@@ -25,7 +25,7 @@ We will be going through the basics of Node.js
 
 
 ## Day 2
-### Express js _[2 hours]_
+### Express js 
 
 We will going through the basics of Express.js
 
@@ -37,7 +37,7 @@ We will going through the basics of Express.js
 
 
 ## Day 3 
-### MongoDB _[2 hours]_
+### MongoDB 
 
 We will go through the basics of MongoDB
 
@@ -50,7 +50,7 @@ We will go through the basics of MongoDB
 * Node.js + Express.js + MongoDB example 
 
 ## Day 4
-### Angularjs _[2 hours]_
+### Angularjs 
 
 We will go through the basics of Angularjs
 
@@ -63,7 +63,7 @@ We will go through the basics of Angularjs
 * Angular.js + Express.js + Node.js + MongoDB example
 
 ## Day 5
-### M.E.A.N. Stack App _[2 hours]_
+### M.E.A.N. Stack App 
 
 On the final day, we will build an End to End Todo Application leveraging the M.E.A.N stack with user authentication.
 
