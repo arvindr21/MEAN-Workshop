@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Day 5 - M.E.A.N.</title>
+
+  <meta name="description" content="Welcome to the M.E.A.N. Workshop">
+  <meta name="author" content="Arvind Ravulavaru">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+  if (window.location.search.match(/print-pdf/gi)) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'css/print/pdf.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }
+  </script>
+
+  <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+  <base target="_blank">
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section>
+        <h1>Day 5 M.E.A.N.</h1>
+        <br/>
+        <br/>
+        <h4>Mongodb.Expressjs.Angualarjs.Nodejs</h4>
+        <br/>
+        <br/>
+        <h3>
+          <small><a href="http://mean-workshop.herokuapp.com/">Workshop Home Page</a>
+          </small>
+        </h3>
+      </section>
+      <section>
+        <h2>Quick Overview of
+          <hr/>M.E.A.N.</h2>
+      </section>
+
+      <section>
+        <h2>Node.js</h2>
+        <hr/>
+        <ul>
+          <li>Javascript on server, run on Google Chrome's V8</li>
+          <li>Global object is
+            <code>process</code>unlike
+            <code>window</code>in a browser</li>
+          <li>High concurrency</li>
+          <li>Non-blocking and evented</li>
+          <li>Commonjs module system</li>
+        </ul>
+        <hr/>
+        <a href="http://mean-workshop.herokuapp.com/#/day1">More info</a>
+
+      </section>
+
+      <section>
+        <h2>Express.js</h2>
+        <hr/>
+        <ul>
+          <li>Web application framework for Node.js</li>
+          <li>Serverside MVC framework</li>
+          <li>Parses request, manages routes and sessions</li>
+          <li>Templating support (
+            <code>JADE/EJS/HJS | LESS/STYLUS</code>)</li>
+          <li>Driven by Middlewares</li>
+        </ul>
+        <hr/>
+        <a href="http://mean-workshop.herokuapp.com/#/day2">More info</a>
+
+      </section>
+
+      <section>
+        <h2>MongoDB</h2>
+        <hr/>
+        <ul>
+          <li>An open-source document database</li>
+          <li>Supports Rich document-based queries, Indexing, Replication, Auto-Sharding</li>
+          <li>Database consists of collections and each collection consists of documents</li>
+          <li>Uses BSON to manage documents</li>
+          <li>Collections are Schema-less</li>
+          <li>Use <a href="http://mongoosejs.com">Mongoose</a> to emaulate schema from Node.js/Express.js</li>
+        </ul>
+        <hr/>
+        <a href="http://mean-workshop.herokuapp.com/#/day3">More info</a>
+
+      </section>
+
+      <section>
+        <h2>Angular.js</h2>
+        <hr/>
+        <ul>
+          <li>Angular is what HTML would have been had it been designed for application</li>
+          <li>Client side driven Apps, to keep them scalable and manageable</li>
+          <li>Impements Separation of Concerns</li>
+          <li>Not a Javascript library/ Not a 2 way data binding library</li>
+          <li>Consists of models, views, controllers, filters, directives, factories among other things</li>
+        </ul>
+        <hr/>
+        <a href="http://mean-workshop.herokuapp.com/#/day4">More info</a>
+
+      </section>
+
+      <section>
+        <h2>Quick Detour</h2>
+        <hr/>
+        <h3><a href="http://arvindr21.github.io/building-n-Scaffolding">Modern UI Build & Scaffolding tools</a>
+        </h3>
+      </section>
+
+      <section>
+        <h2>M.E.A.N.</h2>
+        <hr/>
+        <h2>Architecture</h2>
+        </h3>
+      </section>
+
+      <section>
+        <h3>Entry Criteria & Exit Criteria</h3>
+        <hr/>
+        <img src="imgs/arch.png">
+      </section>
+
+      <section>
+        <h3>Ready-made MEAN solutions</h3>
+        <hr/>
+        <h3><a href="https://github.com/linnovate/mean">mean.io</a>
+        </h3>
+      </section>
+
+      <section>
+        <h3>Ready-made MEAN solutions</h3>
+        <hr/>
+        <h3><a href="http://meanjs.org">meanjs.org</a>
+        </h3>
+      </section>
+
+      <section>
+        <h3>meanjs.org</h3>
+        <hr/>
+        <br/>
+        <h3>Yo - Grunt - Bower</h3>
+        <pre><code>$ npm install -g yo grunt bower generator-meanjs</code></pre> 
+        <br/>
+        <h4>Scaffold an App</h4>
+        <pre><code>$ yo meanjs</code></pre>
+        <br/>
+        <br/>
+        <h4><a href="http://meanjs.org/generator.html#crud-module">Dig into sub-generators</a>
+        </h4>
+      </section>
+
+      <section>
+        <h3>meanjs.org</h3>
+        <hr/>
+        <br/>
+        <h3>Slush - Gulp - Bower</h3>
+        <pre><code>$ npm install -g slush gulp bower slush-meanjs</code></pre> 
+        <br/>
+        <h4>Scaffold an App</h4>
+        <pre><code>$ slush meanjs</code></pre>
+        <br/>
+        <br/>
+        <h4><a href="https://github.com/arvindr21/slush-meanjs#features">Dig into sub-generators</a>
+        </h4>
+      </section>
+
+      <section>
+        <h2>meanjs.org</h2>
+        <hr/>
+        <h3>Quick Hands on</h3>
+      </section>
+
+      <section>
+        <h2>meanjs.org</h2>
+        <hr/>
+        <h3>New Folder
+          <code>myMEANApp</code>
+        </h3>
+        <pre><code>$ npm install -g slush gulp bower slush-meanjs</code></pre> 
+        <br/>
+        <h4>Scaffold the App</h4>
+        <pre><code>$ slush meanjs</code></pre>
+        <h4>Start MongoDB</h4>
+        <pre><code>$ mongod</code></pre>
+        <h4>Run the app</h4>
+        <pre><code>$ gulp</code></pre>
+        <code>http://localhost:3000</code>
+        <br/>
+      </section>
+
+      <section>
+        <h2>Build Our Own Structure</h2>
+      </section>
+
+
+      <section>
+        <h2>Approach</h2>
+        <hr/>
+        <ul style="list-style:none;">
+          <li>Step 1 : Scaffold/Build Express.js server</li>
+          <li>Step 2 : Integrated Mongojs/MongoDB drivers</li>
+          <li>Step 3 : Build the server side end points and logic</li>
+          <li>Step 4 : Scaffold/setup Angular.js project & build UI</li>
+          <li>Step 5 : Integrate Angular.js factory with Express.js Routes</li> 
+        </ul>
+      </section>
+
+      <section>
+        <h2>Build a ToDo App</h2>
+       </section>
+
+       <section>
+        <h2>ToDo App Approach</h2>
+        <hr/>
+        <ul style="list-style:none;">
+          <li>Step 1 : Scaffold/Build Express.js server</li>
+          <li>Step 2 : Integrated Mongojs/MongoDB drivers</li>
+          <li>Step 3 : Build the server side end points and logic</li>
+          <li>Step 4 : Scaffold/setup Angular.js project & build UI</li>
+          <li>Step 5 : Integrate Angular.js factory with Express.js Routes</li> 
+        </ul>
+      </section>
+
+       <section>
+       	<h2>Hands On</h2> <hr/>
+       	<h3>Get Cracking</h3>
+       </section>
+
+       <section>
+       	<h2>Final Output</h2> <hr/>
+       	<h3><a href="http://thejackalofjavascript.com/mean-stack-hands-on-tutorial">M.E.A.N. Stack ToDo App</a></h3>
+       </section>
+
+
+      <section>
+        <h2>Thanks!
+        </h2>
+        <hr/>
+        <h4>Your feedback is highly appreciated
+        </h4>
+        <br/>
+        <br/>
+        <code>@arvindr21</code>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Parallax scrolling
+    // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+    // parallaxBackgroundSize: '2100px 900px',
+
+    // Optional libraries used to extend on reveal.js
+    dependencies: [{
+      src: 'lib/js/classList.js',
+      condition: function() {
+        return !document.body.classList;
+      }
+    }, {
+      src: 'plugin/markdown/marked.js',
+      condition: function() {
+        return !!document.querySelector('[markdown]');
+      }
+    }, {
+      src: 'plugin/markdown/markdown.js',
+      condition: function() {
+        return !!document.querySelector('[markdown]');
+      }
+    }, {
+      src: 'plugin/highlight/highlight.js',
+      async: true,
+      callback: function() {
+        hljs.initHighlightingOnLoad();
+      }
+    }, {
+      src: 'plugin/zoom-js/zoom.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }, {
+      src: 'plugin/notes/notes.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }]
+  });
+  </script>
+
+</body>
+
+</html>
